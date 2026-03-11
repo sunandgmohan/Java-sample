@@ -3,6 +3,6 @@ import java.util.Date;
 public class Main {
     public static void main(String[] args) {
         Date currentDate = new Date();
-        System.out.println("Hello, BashOps!, Let's learn Docker!!! Current date: " + currentDate);
+        System.out.println("Hello, this is my sample java project!!! " + currentDate);
     }
 }
