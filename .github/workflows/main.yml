@@ -32,7 +32,11 @@ jobs:
       run: docker push ${{ secrets.ECR_REPOSITORY }}:latest
 
     - name: Update kubeconfig
-      run: aws eks update-kubeconfig --name ${{ secrets.EKS_CLUSTER_NAME }}
+      uses: aws-actions/amazon-eks-configure-k8s@v4
+      with:
+       cluster-name: java-sample-eks
+       region-code: us-east-1
+      
       
     - name: List files to debug patch
       run: |
